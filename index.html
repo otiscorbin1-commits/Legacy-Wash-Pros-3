@@ -1,0 +1,1066 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+  <title>Legacy Wash Pros</title>
+
+
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: white;
+    }
+
+
+
+
+    :root {
+      --orange: #ff7a00;
+      --dark-orange: #cc5700;
+      --black: #080808;
+      --panel: #151515;
+      --gray: #a5a5a5;
+    }
+
+
+
+
+    /* HEADER */
+
+
+
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 8, 8, 0.96);
+      border-bottom: 2px solid var(--orange);
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+
+
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+
+
+
+    .logo span {
+      color: var(--orange);
+    }
+
+
+
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+
+
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+
+
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+
+
+
+    /* HERO */
+
+
+
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        radial-gradient(circle at 75% 35%, #662a00 0%, transparent 35%),
+        linear-gradient(135deg, #050505, #111111);
+    }
+
+
+
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+
+
+
+    .small-title {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+
+
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 0.95;
+      margin-bottom: 24px;
+    }
+
+
+
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+
+
+
+    .hero p {
+      color: #c9c9c9;
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+
+
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+
+
+
+    button,
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 16px;
+      transition: 0.2s;
+    }
+
+
+
+
+    .primary {
+      background: var(--orange);
+      color: black;
+    }
+
+
+
+
+    .primary:hover {
+      background: #ff9638;
+      transform: translateY(-2px);
+    }
+
+
+
+
+    .secondary {
+      color: white;
+      background: transparent;
+      border: 2px solid var(--orange);
+    }
+
+
+
+
+    .secondary:hover {
+      background: var(--orange);
+      color: black;
+    }
+
+
+
+
+    /* GENERAL */
+
+
+
+
+    section {
+      padding: 80px 7%;
+    }
+
+
+
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+
+
+
+    .section-heading h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+
+
+
+    .section-heading h2 span {
+      color: var(--orange);
+    }
+
+
+
+
+    .section-heading p {
+      color: var(--gray);
+      font-size: 17px;
+    }
+
+
+
+
+    /* SERVICES */
+
+
+
+
+    #services {
+      background: #0e0e0e;
+    }
+
+
+
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+
+
+
+    .service-card {
+      background: var(--panel);
+      padding: 30px;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      transition: 0.25s;
+    }
+
+
+
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--orange);
+    }
+
+
+
+
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+
+
+
+    .service-card h3 {
+      color: var(--orange);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+
+
+
+    .service-card p {
+      color: #bdbdbd;
+      line-height: 1.6;
+    }
+
+
+
+
+    /* PRICES */
+
+
+
+
+    .pricing {
+      background: #080808;
+    }
+
+
+
+
+    .price-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+
+
+
+    .price-card {
+      background: linear-gradient(180deg, #181818, #0e0e0e);
+      border: 1px solid #323232;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+
+
+
+
+    .price-card.featured {
+      border: 2px solid var(--orange);
+      transform: scale(1.03);
+    }
+
+
+
+
+    .price-card h3 {
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+
+
+
+    .price {
+      font-size: 39px;
+      font-weight: 900;
+      color: var(--orange);
+      margin-bottom: 17px;
+    }
+
+
+
+
+    .price-card p {
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+
+
+
+    /* QUOTE */
+
+
+
+
+    #quote {
+      background: #101010;
+    }
+
+
+
+
+    .quote-box {
+      max-width: 700px;
+      margin: auto;
+      background: #181818;
+      border: 1px solid #353535;
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+
+
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 18px 0 7px;
+    }
+
+
+
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #3b3b3b;
+      background: #080808;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+
+
+
+    select:focus,
+    input:focus,
+    textarea:focus {
+      border-color: var(--orange);
+    }
+
+
+
+
+    #estimate {
+      margin-top: 25px;
+      padding: 22px;
+      border-radius: 10px;
+      background: #090909;
+      border-left: 5px solid var(--orange);
+      font-size: 20px;
+      display: none;
+    }
+
+
+
+
+    #estimate strong {
+      color: var(--orange);
+    }
+
+
+
+
+    /* CONTACT */
+
+
+
+
+    #contact {
+      text-align: center;
+    }
+
+
+
+
+    .contact-box {
+      max-width: 760px;
+      margin: auto;
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #333;
+    }
+
+
+
+
+    .contact-box h2 {
+      color: var(--orange);
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+
+
+
+
+    .contact-box p {
+      color: #bbb;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+
+
+
+    /* FOOTER */
+
+
+
+
+    footer {
+      background: #050505;
+      border-top: 1px solid #262626;
+      text-align: center;
+      color: #777;
+      padding: 28px;
+    }
+
+
+
+
+    footer span {
+      color: var(--orange);
+    }
+
+
+
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+
+
+
+      nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+
+
+
+      .hero {
+        min-height: 520px;
+      }
+
+
+
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+
+
+
+      section {
+        padding: 60px 20px;
+      }
+
+
+
+
+      .price-card.featured {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+
+
+
+
+<header>
+  <div class="logo">
+    LEGACY <span>WASH PROS</span>
+  </div>
+
+
+
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#prices">Prices</a>
+    <a href="#quote">Free Quote</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+<section class="hero" id="home">
+
+
+
+
+  <div class="hero-content">
+
+
+
+
+    <div class="small-title">
+      Professional Pressure Washing
+    </div>
+
+
+
+
+    <h1>
+      LEGACY<br>
+      <span>WASH PROS</span>
+    </h1>
+
+
+
+
+    <p>
+      Bring your property back to life with professional exterior cleaning.
+      We clean driveways, houses, sidewalks, patios, decks, fences and more.
+    </p>
+
+
+
+
+    <div class="buttons">
+
+
+
+
+      <a class="button primary" href="#quote">
+        Get a Free Quote
+      </a>
+
+
+
+
+      <a class="button secondary" href="#prices">
+        View Prices
+      </a>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="services">
+
+
+
+
+  <div class="section-heading">
+    <h2>Our <span>Services</span></h2>
+    <p>Professional exterior cleaning for your home or property.</p>
+  </div>
+
+
+
+
+  <div class="service-grid">
+
+
+
+
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3>House Washing</h3>
+      <p>
+        Remove dirt, mildew and buildup from siding and exterior surfaces.
+      </p>
+    </div>
+
+
+
+
+    <div class="service-card">
+      <div class="service-icon">🚗</div>
+      <h3>Driveway Cleaning</h3>
+      <p>
+        Deep cleaning for concrete driveways covered in dirt and stains.
+      </p>
+    </div>
+
+
+
+
+    <div class="service-card">
+      <div class="service-icon">🧱</div>
+      <h3>Sidewalk Cleaning</h3>
+      <p>
+        Make sidewalks and walkways look clean and bright again.
+      </p>
+    </div>
+
+
+
+
+    <div class="service-card">
+      <div class="service-icon">🌳</div>
+      <h3>Decks & Patios</h3>
+      <p>
+        Clean outdoor living areas and remove years of accumulated grime.
+      </p>
+    </div>
+
+
+
+
+    <div class="service-card">
+      <div class="service-icon">🚧</div>
+      <h3>Fence Cleaning</h3>
+      <p>
+        Restore the appearance of wood, vinyl and other fencing.
+      </p>
+    </div>
+
+
+
+
+    <div class="service-card">
+      <div class="service-icon">🏢</div>
+      <h3>Commercial Washing</h3>
+      <p>
+        Exterior cleaning for stores, offices and other commercial properties.
+      </p>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="pricing" id="prices">
+
+
+  <div class="section-heading">
+    <h2>Prices & <span>Services</span></h2>
+    <p>Simple, upfront pricing based on the size of your project.</p>
+  </div>
+
+
+  <div class="price-grid">
+
+
+    <div class="price-card featured">
+      <h3>House Wash & Concrete</h3>
+      <div class="price">$0.20 / sq. ft.</div>
+      <p><strong>House Wash:</strong> $0.20 per sq. ft.</p>
+      <p><strong>Concrete:</strong> $0.20 per sq. ft.</p>
+      <p>Driveways, sidewalks & patios</p>
+    </div>
+
+
+    <div class="price-card">
+      <h3>Wood Fence — One Side</h3>
+      <div class="price">$1.20 / linear ft.</div>
+      <p>One side of the fence</p>
+      <p>Dirt & buildup removal</p>
+      <p>Professional rinse</p>
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="quote">
+
+
+  <div class="section-heading">
+    <h2>Quick <span>Estimate</span></h2>
+    <p>Select a service and enter the size to get an automatic estimate.</p>
+  </div>
+
+
+  <div class="quote-box">
+
+
+    <label for="service">
+      Select Service
+    </label>
+
+
+    <select id="service" onchange="updateUnitLabel(); calculatePrice();">
+      <option value="">Choose a service</option>
+      <option value="0.20" data-unit="sq. ft." data-name="House Washing">House Washing — $0.20 / sq. ft.</option>
+      <option value="0.20" data-unit="sq. ft." data-name="Concrete">Concrete — $0.20 / sq. ft.</option>
+      <option value="1.20" data-unit="linear ft." data-name="Wood Fence (One Side)">Wood Fence (One Side) — $1.20 / linear ft.</option>
+    </select>
+
+
+    <label for="jobSize" id="sizeLabel">
+      Square Feet
+    </label>
+
+
+    <input
+      type="number"
+      id="jobSize"
+      placeholder="Example: 2000"
+      min="1"
+      step="1"
+      oninput="calculatePrice()"
+    >
+
+
+    <div id="estimate"></div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>Legacy Wash Pros</h2>
+    <p>
+      Ready to make your property look new again?
+      Contact Legacy Wash Pros for a free estimate.
+    </p>
+
+
+    <a href="tel:4175725483" class="button primary">
+      Call: 417-572-5483
+    </a>
+
+
+    <a href="mailto:legacywashpros@yahoo.com" class="button primary">
+      Email: legacywashpros@yahoo.com
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<footer>
+
+
+
+
+  © <span id="year"></span>
+  <span>Legacy Wash Pros</span>.
+  All Rights Reserved.
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+<script>
+
+
+  // Automatically shows current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+
+
+  // Update the measurement label for the selected service
+  function updateUnitLabel() {
+
+
+    const service =
+      document.getElementById("service");
+
+
+    const sizeLabel =
+      document.getElementById("sizeLabel");
+
+
+    const jobSize =
+      document.getElementById("jobSize");
+
+
+    const selected =
+      service.options[service.selectedIndex];
+
+
+    if (!service.value) {
+      sizeLabel.textContent = "Square Feet";
+      jobSize.placeholder = "Example: 2000";
+      return;
+    }
+
+
+    const unit = selected.getAttribute("data-unit");
+
+
+    if (unit === "linear ft.") {
+      sizeLabel.textContent = "Linear Feet — One Side";
+      jobSize.placeholder = "Example: 150";
+    } else {
+      sizeLabel.textContent = "Square Feet";
+      jobSize.placeholder = "Example: 2000";
+    }
+  }
+
+
+
+
+  // Automatic service pricing calculator
+  function calculatePrice() {
+
+
+    const service =
+      document.getElementById("service");
+
+
+    const jobSize =
+      Number(document.getElementById("jobSize").value);
+
+
+    const estimate =
+      document.getElementById("estimate");
+
+
+    if (!service.value || jobSize <= 0) {
+      estimate.style.display = "none";
+      estimate.innerHTML = "";
+      return;
+    }
+
+
+    const pricePerUnit =
+      Number(service.value);
+
+
+    const selected =
+      service.options[service.selectedIndex];
+
+
+    const serviceName =
+      selected.getAttribute("data-name");
+
+
+    const unit =
+      selected.getAttribute("data-unit");
+
+
+    const total =
+      jobSize * pricePerUnit;
+
+
+    estimate.style.display = "block";
+
+
+    estimate.innerHTML = `
+      <strong>Your Estimated Price</strong>
+      <br><br>
+      ${jobSize.toLocaleString()} ${unit} × $${pricePerUnit.toFixed(2)}
+      <br><br>
+      <strong>$${total.toFixed(2)}</strong>
+      <br><br>
+      <small>
+        ${serviceName} is priced at $${pricePerUnit.toFixed(2)} per ${unit}.
+        Final pricing may vary depending on the condition and amount of work required.
+      </small>
+    `;
+  }
+
+
+</script>
+
+
+
+
+</body>
+</html>
